@@ -1,0 +1,64 @@
+{
+  "_from": "tinyhere",
+  "_id": "tinyhere@1.2.3",
+  "_inBundle": false,
+  "_integrity": "sha512-GELYz+Flp5lpLhjvcrg/Z0EgE+kJYqogax1y9agZXgRns872CR7N5uhiEwGSAvk0/ZDc/hvxHq80RbuicWLmMA==",
+  "_location": "/tinyhere",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "tinyhere",
+    "name": "tinyhere",
+    "escapedName": "tinyhere",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/tinyhere/-/tinyhere-1.2.3.tgz",
+  "_shasum": "a032ec51b239148d97cc7557eb29dfc7ba144c00",
+  "_spec": "tinyhere",
+  "_where": "C:\\Users\\Asus",
+  "author": {
+    "name": "Croc-wend"
+  },
+  "bin": {
+    "tinyhere": "bin/tinyhere"
+  },
+  "bugs": {
+    "url": "https://github.com/Croc-ye/tinyehere/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "commander": "^2.19.0",
+    "imageinfo": "^1.0.4",
+    "inquirer": "^6.2.2",
+    "tinify": "^1.6.0-beta.2"
+  },
+  "deprecated": false,
+  "description": "Tool for compressing images with cli",
+  "file": [
+    "bin",
+    "libs"
+  ],
+  "homepage": "https://github.com/Croc-ye/tinyehere#readme",
+  "keywords": [
+    "compress",
+    "images",
+    "tool",
+    "cli"
+  ],
+  "license": "ISC",
+  "name": "tinyhere",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Croc-ye/tinyehere.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.3"
+}

@@ -36,6 +36,9 @@ In the current directory, get the png, jpg/jpeg images in the directory, and the
 
 ```
 $ tinyhere
+
+// Compress the specified file
+$ tinyhere xxx.png aaa.png ccc.jpg
 ```
 
 

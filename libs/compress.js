@@ -14,15 +14,15 @@ const {checkApiKey, getKeys} = require('./util');
 // 4、成功
 
 // 对当前目录内的图片进行压缩
-const compress = (newPath = '')=> {
-    newPath = path.join(process.cwd(), newPath);
-    mkDir(newPath);
-
-    const imageList = readDir();
+const compress = (newPath = '', targetList)=> {
+    const imageList = readDir(targetList);
     if (imageList.length === 0) {
         console.log('当前目录内无可用于压缩的图片');
         return;
     }
+    newPath = path.join(process.cwd(), newPath);
+    mkDir(newPath);
+
     findValidateKey(imageList.length);
     console.log('===========开始压缩=========');
     if (newPath !== process.cwd()) {
@@ -75,9 +75,10 @@ const findValidateKey = async imageLength=> { // bug高发处
 }
 
 // 获取当前目录的所有png/jpg文件
-const readDir = ()=> {
+const readDir = (targetList)=> {
     const filePath = process.cwd()
-    const arr = fs.readdirSync(filePath).filter(item=> {
+    const files = targetList || fs.readdirSync(filePath)
+    const arr = files.filter(item=> {
         // 这里应该根据二进制流及文件头获取文件类型mime-type，然后读取文件二进制的头信息，获取其真实的文件类型，对与通过后缀名获得的文件类型进行比较。
         if (/(\.png|\.jpg|\.jpeg)$/.test(item)) { // 求不要出现奇奇怪怪的文件名。。
             const fileInfo = fs.readFileSync(item);

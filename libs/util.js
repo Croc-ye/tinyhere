@@ -62,7 +62,6 @@ const addKeyToFile = (apiKey, content = '')=> {
         const writerStream = fs.createWriteStream(KEY_FILE_PATH);
         // 使用 utf8 编码写入数据
         writerStream.write(content + apiKey,'UTF8');
-
         // 标记文件末尾
         writerStream.end();
 
@@ -91,10 +90,24 @@ const list = ()=> {
         });
     }
 };
+
+const fileExist = (fileName) => {
+    const filePath = path.join(process.cwd(), fileName);
+    let res = false;
+    try {
+        res = fs.existsSync(filePath);
+        if (res === false) console.log(`文件：${fileName}不存在`);
+    } catch (error) {
+        console.log(`文件：${fileName}不存在`);
+        process.exit();
+    }
+    return res;
+}
 module.exports = {
     sleep,
     checkApiKey,
     getKeys,
     addKeyToFile,
-    list
+    list,
+    fileExist
 }

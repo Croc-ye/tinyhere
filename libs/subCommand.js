@@ -1,5 +1,10 @@
 const inquirer = require('inquirer');
-const {checkApiKey, getKeys, addKeyToFile, list} = require('./util.js');
+const {compress} = require('./compress.js');
+const {deepCompress} = require('./deepCompress.js');
+const {checkApiKey, getKeys, addKeyToFile, list, fileExist} = require('./util.js');
+
+module.exports.compress = compress;
+module.exports.deepCompress = deepCompress;
 
 module.exports.init = ()=> {
     inquirer.prompt({
@@ -59,6 +64,13 @@ module.exports.emptyKey = async key=> {
             console.log('已取消');
         }
     })
+}
+
+module.exports.targetFiles = list => {
+    list.forEach(fileName => {
+        fileExist(fileName);
+    });
+    compress('', list);
 }
 
 module.exports.list = list;

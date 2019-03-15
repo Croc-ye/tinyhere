@@ -1,6 +1,6 @@
 {
   "_from": "tinyhere",
-  "_id": "tinyhere@1.2.3",
+  "_id": "tinyhere@1.2.4",
   "_inBundle": false,
   "_integrity": "sha512-GELYz+Flp5lpLhjvcrg/Z0EgE+kJYqogax1y9agZXgRns872CR7N5uhiEwGSAvk0/ZDc/hvxHq80RbuicWLmMA==",
   "_location": "/tinyhere",
@@ -51,7 +51,7 @@
     "tool",
     "cli"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "name": "tinyhere",
   "repository": {
     "type": "git",
@@ -60,5 +60,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.2.3"
+  "version": "1.2.5"
 }

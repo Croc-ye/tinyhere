@@ -17,7 +17,7 @@ Tool for compressing images with cli
 第一次使用时，请先在 tinypng 获取 api-key [点击这里](https://tinypng.com/developers) ，输入用户名和邮箱后，到 [个人中心](https://tinypng.com/dashboard/api) 找到你的api-key，然后初始化后就可以使用了
 
 ```
-$ tinypng --add 12345678901234567890123456789012
+$ tinyhere --add 12345678901234567890123456789012
 ```
 
 For the first time, please get api-key in tinypng [click here](https://tinypng.com/developers), enter your username and email, and go to [user-center](https://tinypng.com/dashboard/api)  Find your api-key and initialize it to use it.
